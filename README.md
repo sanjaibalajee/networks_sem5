@@ -1,4 +1,4 @@
-# Address Aggregation README
+# Address Aggregation 
 
 ## Introduction
 Address aggregation, also known as route aggregation or supernetting, is a networking technique that involves combining multiple contiguous IP address blocks into a larger, more summarized address range. This process helps reduce the size of routing tables in routers and makes the overall routing process more efficient. Address aggregation is a fundamental concept in Internet Protocol (IP) routing and is closely associated with the management of IP address space.
