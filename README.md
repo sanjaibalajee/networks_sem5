@@ -50,17 +50,23 @@ int calculateTotalHosts(int prefix) {
 }
 
 ```
+```c
 	calculateTotalHosts Function:
-int calculateTotalHosts(int prefix) { return (1 << (32 - prefix)); }
+int calculateTotalHosts(int prefix) { return (1 << (32 - prefix)); }```
 This function calculates the total number of hosts in a subnet based on its prefix length.
-		getNextPowerOfTwo Function:
+		
+  
+  getNextPowerOfTwo Function:
+```c
 int32_t getNextPowerOfTwo(uint32_t n) { uint32_t m = 0; while ((1 << m) < n) { m++; } return m; }
+```
 This function calculates the next power of two greater than a given number. It is used in determining the new prefix length for aggregated address ranges.
 		printIPAddress Function:
 void printIPAddress(IPAddress ip) { printf("%hhu.%hhu.%hhu.%hhu/%d\n", ip.octet[0], ip.octet[1], ip.octet[2], ip.octet[3], ip.prefix); }
 This function prints an IP address with its prefix.
 		printIPAddressRange Function:
-IPAddress printIPAddressRange(IPAddress ip, int numAddresses) { ... }
+```c
+IPAddress printIPAddressRange(IPAddress ip, int numAddresses) { ... }```
 This function calculates and prints the range of IP addresses within a subnet, given the starting IP address and the number of addresses required.
 		printAddressAggregation Function:
 void printAddressAggregation(IPAddress startIP, IPAddress endIP) { ... }
@@ -70,21 +76,24 @@ This function prints the aggregated IP address range for a group, including the 
 typedef struct CustomerNode { IPAddress startIP; IPAddress endIP; struct CustomerNode* next; } CustomerNode;
 This structure represents a node in a linked list. Each node contains the start and end IP addresses of a customer range, along with a pointer to the next node in the list.
 		createCustomerNode Function:
-CustomerNode* createCustomerNode(IPAddress startIP, IPAddress endIP) { ... }
+```c CustomerNode* createCustomerNode(IPAddress startIP, IPAddress endIP) { ... }
+```
 This function dynamically allocates memory for a new CustomerNode and initializes it with the provided start and end IP addresses.
 		printFirstAndLast Function:
 void printFirstAndLast(CustomerNode* head) { ... }
 This function prints the start and end IP addresses of the first and last customers in a linked list.
 		getNextIPAddress Function:
-IIPAddress getNextIPAddress(IPAddress ip) { ... }
+``` cIIPAddress getNextIPAddress(IPAddress ip) { ... }```
 This function calculates the next sequential IP address.
 		printCustomerIPAddresses Function:
-CustomerNode* printCustomerIPAddresses(IPAddress ip, int prefixLength, int numCustomers, int numAddressesPerCustomer) { ... }
+``` c
+CustomerNode* printCustomerIPAddresses(IPAddress ip, int prefixLength, int numCustomers, int numAddressesPerCustomer) { ... }```
 This function generates a linked list of customer IP address ranges based on the given parameters.
 
 
 
 ## TO RUN
+```
 gcc new.c
 ./a.out
-
+```
