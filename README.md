@@ -48,7 +48,9 @@ This structure represents an IP address along with its prefix length. The octet 
 int calculateTotalHosts(int prefix) { 
     return (1 << (32 - prefix)); 
 }
-		calculateTotalHosts Function:
+
+```
+	calculateTotalHosts Function:
 int calculateTotalHosts(int prefix) { return (1 << (32 - prefix)); }
 This function calculates the total number of hosts in a subnet based on its prefix length.
 		getNextPowerOfTwo Function:
